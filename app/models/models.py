@@ -11,6 +11,7 @@ class User(Base):
     password = Column(String)
 
     trips = relationship("Trip", back_populates="user")
+    cars = relationship("Car", back_populates="user")
 
 
 class Trip(Base):
